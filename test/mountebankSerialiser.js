@@ -17,6 +17,7 @@ const defaultPact = {
     },
   },
 };
+
 // Read in the MB stubs, and convert to a Pact file
 export const mbMatchesToPact = (imposters) => {
   const pact = readPactFileOrDefault();
