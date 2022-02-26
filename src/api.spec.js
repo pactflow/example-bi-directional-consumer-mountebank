@@ -1,5 +1,5 @@
 import { imposterPort } from "../test/config";
-import { API } from "./api";
+import { ProductAPIClient } from "./api";
 import { Product } from "./product";
 import { startAndClearStubs, writeStubs, stopStubs } from "../test/mountebank";
 
@@ -15,7 +15,7 @@ import {
 
 describe("API Contract Test", () => {
   const mb = new Mountebank();
-  const api = new API(`http://localhost:${imposterPort}`);
+  const api = new ProductAPIClient(`http://localhost:${imposterPort}`);
   const imposter = new Imposter()
     .withPort(imposterPort)
     .withRecordRequests(true);

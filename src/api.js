@@ -4,7 +4,7 @@ const { Product } = require("./product");
 
 axios.defaults.adapter = adapter;
 
-export class API {
+export class ProductAPIClient {
   constructor(url) {
     if (url === undefined || url === "") {
       url = process.env.BASE_URL;
@@ -20,10 +20,6 @@ export class API {
       path = "/" + path;
     }
     return `${this.url}${path}`;
-  }
-
-  generateAuthToken() {
-    return "Bearer " + new Date().toISOString();
   }
 
   async getAllProducts() {
