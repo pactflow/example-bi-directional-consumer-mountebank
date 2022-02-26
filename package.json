@@ -1,0 +1,21 @@
+{
+  "name": "consumer",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.21.1",
+    "jest": "^27.5.1"
+  },
+  "scripts": {
+    "pretest": "rimraf pacts",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@anev/ts-mountebank": "^1.4.1",
+    "@babel/core": "^7.17.5",
+    "@babel/preset-env": "^7.16.11",
+    "mkdirp": "^1.0.4",
+    "mountebank": "^2.6.0",
+    "wait-port": "^0.2.9"
+  }
+}
