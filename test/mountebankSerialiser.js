@@ -48,15 +48,13 @@ export const mbMatchesToPact = (imposters) => {
 const removeDuplicates = (pact) => {
   let timestamps = {};
 
-  const interactions = pact.interactions.reduce((acc, interaction) => {
-    console.log(interaction)
+  pact.interactions = pact.interactions.reduce((acc, interaction) => {
     if (!timestamps[interaction.timestamp]) acc.push(interaction)
     timestamps[interaction.timestamp] = true
 
     return acc
   }, []);
 
-  pact.interactions = interactions
 
   return pact
 };
