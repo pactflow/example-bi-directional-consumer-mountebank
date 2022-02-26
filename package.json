@@ -8,12 +8,14 @@
   },
   "scripts": {
     "pretest": "rimraf pacts",
-    "test": "jest"
+    "test": "jest",
+    "publish": "pact-broker publish ./pacts --consumer-app-version ${GIT_COMMIT}"
   },
   "devDependencies": {
     "@anev/ts-mountebank": "^1.4.1",
     "@babel/core": "^7.17.5",
     "@babel/preset-env": "^7.16.11",
+    "@pact-foundation/pact-core": "^13.4.1-beta.18",
     "mkdirp": "^1.0.4",
     "mountebank": "^2.6.0",
     "wait-port": "^0.2.9"
