@@ -31,11 +31,11 @@ jobs:
           node-version: '14'
       - name: Install for ${{ matrix.pact_provider }}
         run: npm i
-      - name: Test
-        run: make test for ${{ matrix.pact_provider }}
+      - name: Test for ${{ matrix.pact_provider }}
+        run: make test
         env:
           PACT_PROVIDER: ${{ matrix.pact_provider }}
-      - name: Publish pacts
+      - name: Publish pacts for ${{ matrix.pact_provider }}
         run: GIT_BRANCH=${GIT_REF:11} make publish_pacts
         env:
           PACT_PROVIDER: ${{ matrix.pact_provider }}
