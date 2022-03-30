@@ -11,7 +11,7 @@ on:
 jobs:
   run:
     runs-on: ubuntu-latest
-    if: ${{ github.repository == "pactflow/example-bi-directional-consumer-mountebank" }}
+    if: ${{ github.repository == 'pactflow/example-bi-directional-consumer-mountebank' }}
     steps:
       - name: Trigger docs.pactflow.io update workflow
         run: |
