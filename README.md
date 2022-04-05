@@ -6,7 +6,7 @@
 
 This is an example of a Node consumer using Mountebank stubs, and using the Bi-Directional Contract Testing feature of [Pactflow](https://pactflow.io).
 
-It implements a simple Product API client for the [Provider](https://github.com/pactflow/example-pactflow-example-provider-dredd) counterpart.
+It implements a simple Product API client for the [Provider](https://github.com/pactflow/example-pactflow-example-bi-directional-provider-dredd) counterpart.
 
 ### Pre-requisites
 
@@ -22,9 +22,9 @@ To be able to run some of the commands locally, you will need to export the foll
 
 * `PACT_BROKER_TOKEN`: a valid [API token](https://docs.pactflow.io/docs/getting-started/#configuring-your-api-token) for Pactflow
 * `PACT_BROKER_BASE_URL`: a fully qualified domain name with protocol to your pact broker e.g. https://testdemo.pactflow.io
-* `PACT_PROVIDER=pactflow-example-provider-dredd`: this changes the default provider to the Dredd based provider (https://github.com/pactflow/example-provider-dredd)
-* `PACT_PROVIDER=pactflow-example-provider-postman`: ... Postman (https://github.com/pactflow/example-provider-postman)
-* `PACT_PROVIDER=pactflow-example-provider-restassured`: ... Rest Assured (https://github.com/pactflow/example-provider-restassured)
+* `PACT_PROVIDER=pactflow-example-bi-directional-provider-dredd`: this changes the default provider to the Dredd based provider (https://github.com/pactflow/example-bi-directional-provider-dredd)
+* `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: ... Postman (https://github.com/pactflow/example-bi-directional-provider-postman)
+* `PACT_PROVIDER=pactflow-example-bi-directional-provider-restassured`: ... Rest Assured (https://github.com/pactflow/example-bi-directional-provider-restassured)
 
 See all bi-directional contract testing compatible provider [examples](https://docs.pactflow.io/docs/examples).
 
