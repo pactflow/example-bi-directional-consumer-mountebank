@@ -19,7 +19,7 @@
     "@babel/preset-env": "^7.16.11",
     "@pact-foundation/pact-core": "^13.4.1-beta.18",
     "mkdirp": "^1.0.4",
-    "mountebank": "^2.6.0",
+    "mountebank": "^2.8.1",
     "wait-port": "^0.2.9"
   }
 }
