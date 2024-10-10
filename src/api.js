@@ -1,8 +1,5 @@
 const axios = require("axios");
-const adapter = require("axios/lib/adapters/http");
 const { Product } = require("./product");
-
-axios.defaults.adapter = adapter;
 
 export class ProductAPIClient {
   constructor(url) {
