@@ -14,7 +14,7 @@
   },
   "devDependencies": {
     "@anev/ts-mountebank": "1.8.0",
-    "@babel/core": "7.27.1",
+    "@babel/core": "7.27.3",
     "@babel/preset-env": "7.27.2",
     "@pact-foundation/pact-cli": "16.0.7",
     "mkdirp": "3.0.1",
