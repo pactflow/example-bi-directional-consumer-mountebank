@@ -25,7 +25,7 @@ describe("API Contract Test", () => {
   afterAll(() => stopStubs());
 
   const expectedProduct = {
-    id: "10",
+    id: 10,
     type: "CREDIT_CARD",
     name: "28 Degrees",
   };
@@ -64,7 +64,7 @@ describe("API Contract Test", () => {
             .withPredicate(
               new EqualPredicate()
                 .withMethod(HttpMethod.GET)
-                .withPath("/product/10")
+                .withPath("/products/10")
             )
             .withResponse(
               new Response().withStatusCode(200).withJSONBody(expectedProduct)
