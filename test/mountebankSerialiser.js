@@ -24,6 +24,20 @@ const defaultPact = {
   },
 };
 
+const HEADER_REMOVAL_LIST = [
+  "connection"
+];
+
+const omitHeaders = (headers) => {
+  if (!headers) return headers;
+  return Object.keys(headers).reduce((acc, key) => {
+    if (!HEADER_REMOVAL_LIST.includes(key.toLowerCase())) {
+      acc[key] = headers[key];
+    }
+    return acc;
+  }, {});
+};
+
 // Read in the MB stubs, and convert to a Pact file
 export const mbMatchesToPact = (imposters) => {
   const pact = readPactFileOrDefault();
@@ -40,7 +54,7 @@ export const mbMatchesToPact = (imposters) => {
       },
       response: {
         status: match.response.statusCode,
-        headers: match.response.headers,
+        headers: omitHeaders(match.response.headers),
         body: match.response.body ? JSON.parse(match.response.body) : undefined,
       },
       timestamp: match.timestamp, // use this to detect duplicates
