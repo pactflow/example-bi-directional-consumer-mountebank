@@ -19,15 +19,27 @@ export class ProductAPIClient {
     return `${this.url}${path}`;
   }
 
+  generateAuthToken() {
+      return "Bearer " + new Date().toISOString()
+  }
+
   async getAllProducts() {
     return axios
-      .get(this.withPath("/products"))
+      .get(this.withPath("/products"), {
+            headers: {
+                "Authorization": this.generateAuthToken()
+            }
+        })
       .then((r) => r.data.map((p) => new Product(p)));
   }
 
   async getProduct(id) {
     return axios
-      .get(this.withPath("/product/" + id))
+      .get(this.withPath("/products/" + id), {
+            headers: {
+                "Authorization": this.generateAuthToken()
+            }
+        })
       .then((r) => new Product(r.data));
   }
 }
