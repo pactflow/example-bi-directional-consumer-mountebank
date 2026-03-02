@@ -31,7 +31,7 @@ fake_ci: .env
 	@CI=true \
 	GIT_COMMIT=`git rev-parse --short HEAD`+`date +%s` \
 	GIT_BRANCH=`git rev-parse --abbrev-ref HEAD` \
-	BASE_URL=http://localhost:5000 \
+	BASE_URL=http://localhost:5001 \
 	make ci
 
 publish_pacts: .env
