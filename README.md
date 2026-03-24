@@ -20,7 +20,6 @@
     - [Windows](#windows)
   - [Caveats](#caveats)
   - [Related topics / posts / discussions](#related-topics--posts--discussions)
-  - [Other examples of how to do this form of testing](#other-examples-of-how-to-do-this-form-of-testing)
   - [Found an issue?](#found-an-issue)
 
 ## Overview of Example
@@ -68,7 +67,7 @@ When you run the CI pipeline (see below for doing this), the pipeline should per
 
 This project is currently compatible with the following provider(s):
 
-* [pactflow-example-bi-directional-provider-dredd](https://github.com/pactflow/example-bi-directional-provider-dredd)
+* [pactflow-example-bi-directional-provider-drift](https://github.com/pactflow/example-bi-directional-provider-drift)
 * [pactflow-example-bi-directional-provider-restassured](https://github.com/pactflow/example-provider-restassured)
 * [pactflow-example-bi-directional-provider-postman](https://github.com/pactflow/example-bi-directional-provider-postman)
 <!-- * [pactflow-example-bi-directional-provider-dotnet](https://github.com/pactflow/example-bi-directional-provider-dotnet) -->
@@ -93,7 +92,7 @@ To be able to run some of the commands locally, you will need to export the foll
 
 Set `PACT_PROVIDER` to one of the following
 
-- `PACT_PROVIDER=pactflow-example-bi-directional-provider-dredd`: Dredd - (https://github.com/pactflow/example-bi-directional-provider-dredd)
+- `PACT_PROVIDER=pactflow-example-bi-directional-provider-drift`: Drift - (https://github.com/pactflow/example-bi-directional-provider-drift)
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-postman`: Postman - (https://github.com/pactflow/example-bi-directional-provider-postman)
 - `PACT_PROVIDER=pactflow-example-bi-directional-provider-restassured`:  Rest Assured - (https://github.com/pactflow/example-bi-directional-provider-restassured)
   

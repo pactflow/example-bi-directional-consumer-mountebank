@@ -1,7 +1,7 @@
 import * as fs from "fs";
 
 const pacticipant = "pactflow-example-bi-directional-consumer-mountebank";
-const provider = "pactflow-example-bi-directional-provider-dredd";
+const provider = "pactflow-example-bi-directional-provider-drift";
 
 const filePath = `./pacts/${pacticipant}-${
   process.env.PACT_PROVIDER || provider
