@@ -18,7 +18,7 @@ jobs:
       matrix:
         pact_provider:
           [
-            "pactflow-example-bi-directional-provider-dredd",
+            "pactflow-example-bi-directional-provider-drift",
             # "pactflow-example-bi-directional-provider-restassured",
             # "pactflow-example-bi-directional-provider-postman",
             # "pactflow-example-provider",
